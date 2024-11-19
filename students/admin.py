@@ -1,10 +1,7 @@
 from django.contrib import admin
 from .models import Student
 
+@admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('user', 'name', 'dob', 'registration_date')
-    search_fields = ('name', 'user__email')
-    list_filter = ('registration_date',)
-    ordering = ('name',)
-
-admin.site.register(Student, StudentAdmin)
+    list_display = ('id', 'full_name', 'user', 'dob', 'registration_date')
+    search_fields = ('full_name', 'user__email')
