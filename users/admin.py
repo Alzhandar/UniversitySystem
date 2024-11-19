@@ -4,7 +4,7 @@ from .models import CustomUser
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
-    list_display = ('email', 'username', 'role', 'is_active', 'is_staff')
+    list_display = ('id', 'email', 'username', 'role', 'is_active', 'is_staff')
     list_filter = ('role', 'is_active', 'is_staff')
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
@@ -19,6 +19,6 @@ class CustomUserAdmin(UserAdmin):
         }),
     )
     search_fields = ('email', 'username')
-    ordering = ('email',)
+    ordering = ('id', 'email')  
 
 admin.site.register(CustomUser, CustomUserAdmin)
