@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'grades',
     'attendance',
     'notifications',
+    'drf_spectacular',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,7 @@ ROOT_URLCONF = 'wspClone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],  # Убедитесь, что указана директория с шаблонами
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +77,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'wspClone.wsgi.application'
 
 
@@ -139,6 +139,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -160,4 +161,11 @@ DJOSER = {
         'current_user': 'users.serializers.CustomUserSerializer',
     },
     'HIDE_USERS': True,  
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Student Management API',
+    'DESCRIPTION': 'API documentation for the Student Management System.',
+    'VERSION': '1.0.0',
+    'SCHEMA_PATH_PREFIX': '/api',
 }
