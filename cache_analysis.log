@@ -18758,3 +18758,89 @@ DEBUG 2024-11-23 15:32:40,331 autoreload File /Users/lzandaribaev/Desktop/WEB/pr
 DEBUG 2024-11-23 15:32:40,331 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/admin/migrations/0002_logentry_remove_auto_add.py first seen with mtime 1731961541.1762402
 DEBUG 2024-11-23 15:33:01,982 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/templates/base.html previous mtime: 1732375778.7682292, current mtime: 1732375981.8355021
 DEBUG 2024-11-23 15:33:01,986 autoreload /Users/lzandaribaev/Desktop/WEB/projects/wspClone/templates/base.html notified as changed. Signal results: [(<function template_changed at 0x101db6e80>, True), (<function translation_file_changed at 0x102522200>, None)].
+DEBUG 2024-11-23 16:00:54,014 base Exception while resolving variable 'script_url' in template 'drf_spectacular/swagger_ui.html'.
+Traceback (most recent call last):
+  File "/Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "/Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/context.py", line 85, in __getitem__
+    raise KeyError(key)
+KeyError: 'script_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'script_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/base.py", line 899, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'script_url'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/base.py", line 906, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [script_url] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x103d1e340>>, 'request': <rest_framework.request.Request: GET '/api/docs/'>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x103d2ebd0>, 'perms': PermWrapper(<django.contrib.auth.models.AnonymousUser object at 0x103d2ebd0>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/api/docs/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'title': 'Student Management API', 'swagger_ui_css': 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@latest/swagger-ui.css', 'swagger_ui_bundle': 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@latest/swagger-ui-bundle.js', 'swagger_ui_standalone': 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@latest/swagger-ui-standalone-preset.js', 'favicon_href': 'https://cdn.jsdelivr.net/npm/swagger-ui-dist@latest/favicon-32x32.png', 'schema_url': '/api/schema/', 'settings': '{\n  "deepLinking": true\n}', 'oauth2_config': '{}', 'template_name_js': 'drf_spectacular/swagger_ui.js', 'csrf_header_name': 'X-CSRFTOKEN', 'schema_auth_names': '[]'}, {'block': <Block Node: body. Contents: [<TextNode: '\n    <div id="swagger-ui"'>, <Variable Node: swagger_ui_bundle>, <TextNode: '"></script>\n    <script s'>, <Variable Node: swagger_ui_standalone>, <TextNode: '"></script>\n    '>, <IfNode>, <TextNode: '\n    '>]>}]
+INFO 2024-11-23 16:00:54,020 basehttp "GET /api/docs/ HTTP/1.1" 200 4655
+DEBUG 2024-11-23 16:00:54,173 cache_analysis Cache MISS for key: notifications_None
+DEBUG 2024-11-23 16:00:54,174 cache_analysis Cache MISS for key: notifications_None
+DEBUG 2024-11-23 16:00:54,175 cache_analysis Cache MISS for key: notifications_None
+INFO 2024-11-23 16:00:54,190 basehttp "GET /api/schema/ HTTP/1.1" 200 123953
+DEBUG 2024-11-23 16:00:55,060 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/auth/context_processors.py first seen with mtime 1731961541.2423532
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/sessions/serializers.py first seen with mtime 1731961541.487728
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/resp2.py first seen with mtime 1731961540.266381
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/messages/context_processors.py first seen with mtime 1731961541.4292068
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/drf_spectacular/hooks.py first seen with mtime 1732077899.4654768
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/cluster.py first seen with mtime 1731961540.2681289
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/cluster.py first seen with mtime 1731961540.2640138
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/backoff.py first seen with mtime 1731961540.2635329
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/messages/storage/session.py first seen with mtime 1731961541.4302557
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/retry.py first seen with mtime 1731961540.2675548
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/lock.py first seen with mtime 1731961540.2646873
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/client.py first seen with mtime 1731961540.2638106
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/encoders.py first seen with mtime 1731961540.2658958
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/__init__.py first seen with mtime 1731961540.2679882
+DEBUG 2024-11-23 16:00:55,061 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/base.py first seen with mtime 1731961540.265678
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/crc.py first seen with mtime 1731961540.2642918
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/hiredis.py first seen with mtime 1731961540.2662156
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/sentinel.py first seen with mtime 1731961540.268904
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/utils.py first seen with mtime 1731961540.2653842
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/socket.py first seen with mtime 1731961540.26666
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/connection.py first seen with mtime 1731961540.2641919
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/__init__.py first seen with mtime 1731961540.2655249
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/helpers.py first seen with mtime 1731961540.2686388
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/connection.py first seen with mtime 1731961540.2673097
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/typing.py first seen with mtime 1731961540.2652504
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/__init__.py first seen with mtime 1731961540.2634144
+DEBUG 2024-11-23 16:00:55,062 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/cryptography/__about__.py first seen with mtime 1731961542.66785
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/sentinel.py first seen with mtime 1731961540.26516
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/core.py first seen with mtime 1731961540.2684717
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/retry.py first seen with mtime 1731961540.2649813
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/commands/redismodules.py first seen with mtime 1731961540.2687504
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/cache.py first seen with mtime 1731961540.2636564
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/utils.py first seen with mtime 1731961540.2678432
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/rest_framework_simplejwt/serializers.py first seen with mtime 1731961542.995772
+DEBUG 2024-11-23 16:00:55,063 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/lock.py first seen with mtime 1731961540.2674394
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/__init__.py first seen with mtime 1731961540.2668116
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/rest_framework/authtoken/views.py first seen with mtime 1731961542.5439916
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/messages/storage/cookie.py first seen with mtime 1731961541.430074
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/contrib/messages/storage/fallback.py first seen with mtime 1731961541.4301646
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/cluster.py first seen with mtime 1731961540.267151
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/credentials.py first seen with mtime 1731961540.264404
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/resp3.py first seen with mtime 1731961540.2665164
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/commands.py first seen with mtime 1731961540.265799
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/client.py first seen with mtime 1731961540.266978
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/rest_framework/authtoken/serializers.py first seen with mtime 1731961542.543886
+DEBUG 2024-11-23 16:00:55,064 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/asyncio/sentinel.py first seen with mtime 1731961540.267743
+DEBUG 2024-11-23 16:00:55,065 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/cryptography/__init__.py first seen with mtime 1731961542.6657217
+DEBUG 2024-11-23 16:00:55,065 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/django/template/context_processors.py first seen with mtime 1731961541.5946953
+DEBUG 2024-11-23 16:00:55,065 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/exceptions.py first seen with mtime 1731961540.2645562
+DEBUG 2024-11-23 16:00:55,065 autoreload File /Users/lzandaribaev/Desktop/WEB/projects/wspClone/env/lib/python3.12/site-packages/redis/_parsers/helpers.py first seen with mtime 1731961540.2660384
