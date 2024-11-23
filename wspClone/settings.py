@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -222,3 +222,7 @@ LOGGING = {
         },
     },
 }
+
+GOOGLE_ANALYTICS_CREDENTIALS = "google_credentials/google_credentials.json"
+DEBUG = config('DEBUG', default=True, cast=bool)
+GA_MEASUREMENT_ID = config('GA_MEASUREMENT_ID', default=None)

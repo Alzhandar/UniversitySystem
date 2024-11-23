@@ -10,3 +10,5 @@ celery
 django-cors-headers
 django-filter
 drf-yasg
+google-analytics-data
+python-decouple
