@@ -1,4 +1,3 @@
-# notifications/permissions.py
 from rest_framework.permissions import BasePermission
 
 class IsRecipientOrAdmin(BasePermission):
